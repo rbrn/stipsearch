@@ -1,9 +1,9 @@
 package com.db.pwcc.tre.elastic.config;
 
+import com.github.cloudyrock.spring.MongockSpring5;
+import io.changock.runner.core.builder.PackageBuilderConfigurable;
 import io.github.jhipster.config.JHipsterConstants;
 import com.github.cloudyrock.mongock.driver.mongodb.springdata.v3.SpringDataMongo3Driver;
-import com.github.cloudyrock.spring.MongockSpring5;
-import com.github.cloudyrock.spring.MongockSpring5.MongockInitializingBeanRunner;
 import io.github.jhipster.domain.util.JSR310DateConverters.DateToZonedDateTimeConverter;
 import io.github.jhipster.domain.util.JSR310DateConverters.ZonedDateTimeToDateConverter;
 import org.slf4j.Logger;
@@ -59,17 +59,11 @@ public class DatabaseConfiguration {
     }
 
     @Bean
-    public MongockInitializingBeanRunner mongockInitializingBeanRunner(ApplicationContext springContext,
-              MongoTemplate mongoTemplate,
-              @Value("${mongock.lock.lockAcquiredForMinutes:5}") long lockAcquiredForMinutes,
-              @Value("${mongock.lock.maxWaitingForLockMinutes:3}") long maxWaitingForLockMinutes,
-              @Value("${mongock.lock.maxTries:3}") int maxTries) {
-        SpringDataMongo3Driver driver = new SpringDataMongo3Driver(mongoTemplate);
-        return MongockSpring5.builder()
-            .setDriver(driver)
-            .addChangeLogsScanPackage("com.db.pwcc.tre.elastic.config.dbmigrations")
-            .setLockConfig(lockAcquiredForMinutes, maxWaitingForLockMinutes, maxTries)
-            .setSpringContext(springContext)
-            .buildInitializingBeanRunner();
+    public MongockSpring5.MongockInitializingBeanRunner mongockInitializingBeanRunner(ApplicationContext springContext,
+                                                                                      MongoTemplate mongoTemplate,
+                                                                                      @Value("${mongock.lock.lockAcquiredForMinutes:5}") long lockAcquiredForMinutes,
+                                                                                      @Value("${mongock.lock.maxWaitingForLockMinutes:3}") long maxWaitingForLockMinutes,
+                                                                                      @Value("${mongock.lock.maxTries:3}") int maxTries) {
+        return null;
     }
 }

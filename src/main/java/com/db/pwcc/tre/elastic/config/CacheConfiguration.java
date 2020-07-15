@@ -3,7 +3,7 @@ package com.db.pwcc.tre.elastic.config;
 import io.github.jhipster.config.JHipsterConstants;
 import io.github.jhipster.config.JHipsterProperties;
 
-import com.hazelcast.config.*;
+ import com.hazelcast.config.*;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.Hazelcast;
 
@@ -123,24 +123,6 @@ public class CacheConfiguration {
         fail-safety. Valid numbers are 0 (no backup), 1, 2, 3.
         */
         mapConfig.setBackupCount(jHipsterProperties.getCache().getHazelcast().getBackupCount());
-
-        /*
-        Valid values are:
-        NONE (no eviction),
-        LRU (Least Recently Used),
-        LFU (Least Frequently Used).
-        NONE is the default.
-        */
-        mapConfig.getEvictionConfig().setEvictionPolicy(EvictionPolicy.LRU);
-
-        /*
-        Maximum size of the map. When max size is reached,
-        map is evicted based on the policy defined.
-        Any integer between 0 and Integer.MAX_VALUE. 0 means
-        Integer.MAX_VALUE. Default is 0.
-        */
-        mapConfig.getEvictionConfig().setMaxSizePolicy(MaxSizePolicy.USED_HEAP_SIZE);
-
         return mapConfig;
     }
 

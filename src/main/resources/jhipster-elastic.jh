@@ -1,0 +1,25 @@
+entity Employee {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	salary Long,
+	commissionPct Long
+}
+
+entity Job {
+	jobTitle String,
+	minSalary Long,
+	maxSalary Long
+}
+
+relationship OneToMany {
+	Employee to Job{employee}
+}
+
+paginate all with pagination
+
+service all with serviceImpl
+
+filter all
