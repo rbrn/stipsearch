@@ -1,0 +1,6 @@
+version: '2'
+services:
+  stipsearch-hazelcast-management-center:
+    image: hazelcast/management-center:4.0.3
+    ports:
+      - 8180:8080

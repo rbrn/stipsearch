@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.db.pwcc.tre.elastic",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.9.1",
+    "applicationType": "microservice",
+    "baseName": "stipsearch",
+    "packageName": "com.db.pwcc.tre.elastic",
+    "packageFolder": "com/db/pwcc/tre/elastic",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MDVhMzVmOTk2MGRmMjU5MGM4OGEwNDEwZTQ0ODZlMzg5MTViMDRjZmQ5MWVjNGY0OTUxMGNjM2VkZTY5NzM1Njg4ZGNmMDQyOThkYmI5NGRkNGViN2JlNDA3N2Y2MjdhYWEzNmUzYWQxY2IzNjlkOWUwNTY1Mjg2NjRhZDVlZGQ=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1594839375486,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": ["en"],
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
